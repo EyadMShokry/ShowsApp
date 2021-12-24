@@ -8,5 +8,5 @@ target 'ShowsApp' do
   # Pods for ShowsApp
 pod 'IQKeyboardManagerSwift'
 pod 'lottie-ios'
-
+pod 'Cosmos'
 end

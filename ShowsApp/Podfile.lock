@@ -1,20 +1,24 @@
 PODS:
+  - Cosmos (23.0.0)
   - IQKeyboardManagerSwift (6.5.6)
   - lottie-ios (3.3.0)
 
 DEPENDENCIES:
+  - Cosmos
   - IQKeyboardManagerSwift
   - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - Cosmos
     - IQKeyboardManagerSwift
     - lottie-ios
 
 SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
 
-PODFILE CHECKSUM: cee5897871a578110261ea229aa11c337874fcae
+PODFILE CHECKSUM: bba82714fe4a6a310aa71b3b25bddf1d3bb16c91
 
 COCOAPODS: 1.10.2

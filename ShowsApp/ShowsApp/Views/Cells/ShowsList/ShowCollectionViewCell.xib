@@ -6,18 +6,122 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Urbanist-VariableFont_wght.ttf">
+            <string>Urbanist-Regular</string>
+            <string>UrbanistRoman-Bold</string>
+            <string>UrbanistRoman-ExtraBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7iP-s1-XpM">
-            <rect key="frame" x="0.0" y="0.0" width="244" height="260"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShowCollectionViewCell" id="7iP-s1-XpM" customClass="ShowCollectionViewCell" customModule="ShowsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="243"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="O2B-FZ-KtU">
-                <rect key="frame" x="0.0" y="0.0" width="244" height="260"/>
+                <rect key="frame" x="0.0" y="0.0" width="163" height="243"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showPoster" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-za-UhA">
+                        <rect key="frame" x="0.0" y="0.0" width="163" height="243"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woV-yL-Hwh" customClass="GradiantView" customModule="ShowsApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="163" height="243"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="st9-dT-enZ">
+                                <rect key="frame" x="34" y="161.5" width="95.5" height="65.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-tw-UF0">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="UrbanistRoman-ExtraBold" family="Urbanist" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 . 30 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be4-3t-ftT">
+                                        <rect key="frame" x="0.0" y="26" width="95.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
+                                        <color key="textColor" red="0.78823529411764703" green="0.7803921568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-cM-TAr" customClass="CosmosView" customModule="Cosmos">
+                                        <rect key="frame" x="0.0" y="49.5" width="79.5" height="16"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                <color key="value" red="0.78823529411764703" green="0.7803921568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                <color key="value" red="0.78823529410000004" green="0.78039215689999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                <real key="value" value="-2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tHv-cM-TAr" secondAttribute="trailing" constant="16" id="SdU-LI-uc6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="st9-dT-enZ" firstAttribute="centerX" secondItem="woV-yL-Hwh" secondAttribute="centerX" id="b43-jT-haa"/>
+                            <constraint firstAttribute="bottom" secondItem="st9-dT-enZ" secondAttribute="bottom" constant="16" id="eI9-WN-z3w"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.090196078430000007" green="0.074509803920000006" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="woV-yL-Hwh" secondAttribute="bottom" id="B3d-GH-AK0"/>
+                    <constraint firstItem="woV-yL-Hwh" firstAttribute="leading" secondItem="O2B-FZ-KtU" secondAttribute="leading" id="OmY-cR-OBw"/>
+                    <constraint firstAttribute="bottom" secondItem="GSW-za-UhA" secondAttribute="bottom" id="QUh-Fj-3Pi"/>
+                    <constraint firstAttribute="trailing" secondItem="GSW-za-UhA" secondAttribute="trailing" id="U4u-Ur-biG"/>
+                    <constraint firstItem="GSW-za-UhA" firstAttribute="top" secondItem="O2B-FZ-KtU" secondAttribute="top" id="UPg-XZ-8Oq"/>
+                    <constraint firstItem="GSW-za-UhA" firstAttribute="leading" secondItem="O2B-FZ-KtU" secondAttribute="leading" id="XPC-IP-zsK"/>
+                    <constraint firstItem="woV-yL-Hwh" firstAttribute="top" secondItem="O2B-FZ-KtU" secondAttribute="top" id="iR0-0I-hLV"/>
+                    <constraint firstAttribute="trailing" secondItem="woV-yL-Hwh" secondAttribute="trailing" id="nq0-h5-gFs"/>
+                </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="244" height="260"/>
-            <point key="canvasLocation" x="-289.85507246376812" y="129.91071428571428"/>
+            <connections>
+                <outlet property="showGradinetView" destination="woV-yL-Hwh" id="l4T-eB-xD7"/>
+                <outlet property="showInformationLabel" destination="be4-3t-ftT" id="Ekg-oK-Kvt"/>
+                <outlet property="showNameLabel" destination="lxn-tw-UF0" id="BWk-Uv-Tl5"/>
+                <outlet property="showRatingView" destination="tHv-cM-TAr" id="PTM-c6-PXq"/>
+            </connections>
+            <point key="canvasLocation" x="-290.57971014492756" y="129.57589285714286"/>
         </collectionViewCell>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Afb-Nc-LXB">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" name="UrbanistRoman-Bold" family="Urbanist" pointSize="50"/>
+            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="-386" y="-15"/>
+        </label>
     </objects>
+    <designables>
+        <designable name="tHv-cM-TAr">
+            <size key="intrinsicContentSize" width="72" height="16"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="showPoster" width="675" height="1000"/>
+    </resources>
 </document>

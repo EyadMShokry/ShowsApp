@@ -13,13 +13,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     
-    private func setAnimationView() {
-        animatioView.contentMode = .scaleAspectFit
-        animatioView.loopMode = .loop
-        animatioView.animationSpeed = 1
-        animatioView.play()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,8 +20,27 @@ class HomeViewController: UIViewController {
         searchTextField.setLeftPaddingPoints(amount: 14.0)
     }
 
+    private func setAnimationView() {
+        animatioView.contentMode = .scaleAspectFit
+        animatioView.loopMode = .loop
+        animatioView.animationSpeed = 1
+        animatioView.play()
+    }
+    
+    private func navigateToShowsList() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let showsListVC = storyboard.instantiateViewController(withIdentifier: "ShowsListViewController") as! ShowsListViewController
+        showsListVC.searchWord = searchTextField.text ?? ""
+        self.navigationController?.pushViewController(showsListVC, animated: true)
+    }
+
     @IBAction func onClickSearchButton(_ sender: UIButton) {
-        
+        if searchTextField.text != nil || searchTextField.text != "" {
+            self.alertMessage(title: "Empty Field!", userMessage: "Please, fill the search field to continue")
+        }
+        else {
+            navigateToShowsList()
+        }
     }
     
     
