@@ -16,4 +16,12 @@ extension UIViewController {
         myAlert.addAction(okAction)
         present(myAlert, animated: true, completion: nil)
     }
+    
+    func setNavigationbarBackButton() {
+        let backImage = UIImage(named: "Back")?.withRenderingMode(.alwaysOriginal)
+        navigationController?.navigationBar.backIndicatorImage = backImage
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backButtonDisplayMode = .minimal
+    }
 }

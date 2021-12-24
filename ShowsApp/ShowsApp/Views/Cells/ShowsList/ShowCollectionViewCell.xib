@@ -9,7 +9,6 @@
     <customFonts key="customFonts">
         <array key="Urbanist-VariableFont_wght.ttf">
             <string>Urbanist-Regular</string>
-            <string>UrbanistRoman-Bold</string>
             <string>UrbanistRoman-ExtraBold</string>
         </array>
     </customFonts>
@@ -86,7 +85,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.090196078430000007" green="0.074509803920000006" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="woV-yL-Hwh" secondAttribute="bottom" id="B3d-GH-AK0"/>
                     <constraint firstItem="woV-yL-Hwh" firstAttribute="leading" secondItem="O2B-FZ-KtU" secondAttribute="leading" id="OmY-cR-OBw"/>
@@ -107,14 +106,6 @@
             </connections>
             <point key="canvasLocation" x="-290.57971014492756" y="129.57589285714286"/>
         </collectionViewCell>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Afb-Nc-LXB">
-            <rect key="frame" x="0.0" y="0.0" width="265" height="60"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" name="UrbanistRoman-Bold" family="Urbanist" pointSize="50"/>
-            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <nil key="highlightedColor"/>
-            <point key="canvasLocation" x="-386" y="-15"/>
-        </label>
     </objects>
     <designables>
         <designable name="tHv-cM-TAr">

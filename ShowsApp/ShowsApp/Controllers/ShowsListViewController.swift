@@ -17,8 +17,15 @@ class ShowsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    private func setupUI() {
         showsCollectionView.dataSource = self
         showsCollectionView.delegate = self
+        showsCollectionView.register(UINib(nibName: "ShowCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ShowCollectionViewCell")
+        searchTextField.setLeftPaddingPoints(amount: 24)
+        setNavigationbarBackButton()
     }
     
     private func navigateToShowDetails() {
@@ -35,7 +42,7 @@ class ShowsListViewController: UIViewController {
 
 }
 
-extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -52,5 +59,12 @@ extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding = 16.0
+        let width = showsCollectionView.frame.width/2
+        let height = showsCollectionView.frame.height/2.5
+        return CGSize(width: width-padding, height: height)
     }
 }

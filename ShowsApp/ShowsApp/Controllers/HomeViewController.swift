@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         setAnimationView()
         searchTextField.setLeftPaddingPoints(amount: 14.0)
+        setNavigationbarBackButton()
     }
 
     private func setAnimationView() {
@@ -35,10 +36,11 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func onClickSearchButton(_ sender: UIButton) {
-        if searchTextField.text != nil || searchTextField.text != "" {
+        if searchTextField.text == nil || searchTextField.text == "" {
             self.alertMessage(title: "Empty Field!", userMessage: "Please, fill the search field to continue")
         }
         else {
+            view.endEditing(true)
             navigateToShowsList()
         }
     }
