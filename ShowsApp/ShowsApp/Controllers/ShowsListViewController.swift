@@ -67,7 +67,6 @@ extension ShowsListViewController: ShowsPresenterDelegate {
     }
     
     func fail(error: String?) {
-        print("Error: \(error)")
         self.showsArray = []
         self.performUIUpdatesOnMain {
             self.showsCollectionView.reloadData()
@@ -92,13 +91,17 @@ extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewD
         return showCell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    fileprivate func extractedFunc(_ indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let showDetailsVC = storyboard.instantiateViewController(withIdentifier: "ShowDetailsViewController") as! ShowDetailsViewController
         showDetailsVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         showDetailsVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         showDetailsVC.show = showsArray[indexPath.item]
         self.present(showDetailsVC, animated: true, completion: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        extractedFunc(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -14,7 +14,7 @@ enum APPError: Error {
     case invalidStatusCode(Int)
 }
 
-//Result enum to show success or failure
+// MARK: - Result enum to show success or failure
 enum Result<T> {
     case success(T)
     case failure(APPError)
@@ -25,7 +25,9 @@ class NetworkingManager {
     private var imageQueue = OperationQueue()
     private var imageCache = NSCache<AnyObject, AnyObject>()
 
-    //dataRequest which sends request to given URL and convert to Decodable Object
+    
+    // MARK: - dataRequest which sends request to given URL and convert to Decodable Object
+    
     func dataRequest<T: Decodable>(with url: String, objectType: T.Type, completion: @escaping (Result<T>) -> Void) {
 
         //create the url with NSURL
@@ -70,36 +72,8 @@ class NetworkingManager {
 
 extension NetworkingManager {
     
-    func downloadImageWithUrl(imageUrl: String, completionBlock: @escaping (_ image: UIImage?)-> Void) {
-        let url = URL(string: imageUrl)
-        do {
-            let data = try Data(contentsOf: url!)
-            let newImage = UIImage(data: data)
-            if newImage != nil {
-                self.runOnMainThread {
-                    completionBlock(newImage)
-                }
-            } else {
-                completionBlock(nil)
-            }
-        } catch {
-            completionBlock(nil)
-        }
-    }
+    // MARK: - Helper method to construct request's url
 
-    fileprivate func runOnMainThread(block:@escaping ()->Void) {
-        if Thread.isMainThread {
-            block()
-        } else {
-            let mainQueue = OperationQueue.main
-            mainQueue.addOperation({
-                block()
-            })
-        }
-    }
-}
-
-extension NetworkingManager {
     func getFullUrl(baseUrl: String, endPoint: EndPointUrls, parameters: [String: String]? = nil) -> String {
         let urlString = "\(baseUrl)\(endPoint.rawValue)"
         var components = URLComponents()

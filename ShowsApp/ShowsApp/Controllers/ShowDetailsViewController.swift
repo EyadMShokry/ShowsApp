@@ -10,6 +10,7 @@ import UIKit
 class ShowDetailsViewController: UIViewController {
     @IBOutlet weak var showDetailsTableView: UITableView!
     var show: Show!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -24,7 +25,6 @@ class ShowDetailsViewController: UIViewController {
         showDetailsTableView.contentInsetAdjustmentBehavior = .never
         showDetailsTableView.insetsContentViewsToSafeArea = false
     }
-
 }
 
 extension ShowDetailsViewController: UITableViewDataSource, UITableViewDelegate {

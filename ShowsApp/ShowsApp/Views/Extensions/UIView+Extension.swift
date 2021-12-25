@@ -8,6 +8,8 @@
 import UIKit
 
 extension UIView {
+    
+    //This method to extract year chars from a date string line 1-1-2022. It should return 2022 only
     func extractYearFrom(date: String) -> String {
         let dateStrategy = Date.ParseStrategy(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)", timeZone: .current)
         let date = try? Date(date, strategy: dateStrategy)

@@ -47,7 +47,5 @@ class HomeViewController: UIViewController {
             navigateToShowsList()
         }
     }
-    
-    
 }
 
