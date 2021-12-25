@@ -24,4 +24,11 @@ extension UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backButtonDisplayMode = .minimal
     }
+    
+    func presentOnRoot(`with` viewController : UIViewController){
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.present(navigationController, animated: false, completion: nil)
+    }
+
 }

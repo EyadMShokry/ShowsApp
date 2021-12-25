@@ -58,11 +58,15 @@ extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let showDetailsVC = storyboard.instantiateViewController(withIdentifier: "ShowDetailsViewController") as! ShowDetailsViewController
+        showDetailsVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        showDetailsVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(showDetailsVC, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding = 16.0
+        let padding = 8.0
         let width = showsCollectionView.frame.width/2
         let height = showsCollectionView.frame.height/2.5
         return CGSize(width: width-padding, height: height)

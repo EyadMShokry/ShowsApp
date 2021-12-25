@@ -26,6 +26,10 @@
 		688326BD2776093400055288 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688326BC2776093400055288 /* UITextField+Extension.swift */; };
 		688326C02776166100055288 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688326BF2776166100055288 /* GradientView.swift */; };
 		688326C22776246A00055288 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688326C12776246A00055288 /* UIViewController+Extension.swift */; };
+		688326C427765B6500055288 /* ShowPosterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688326C327765B6500055288 /* ShowPosterTableViewCell.xib */; };
+		688326C627765B7D00055288 /* ShowPosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688326C527765B7D00055288 /* ShowPosterTableViewCell.swift */; };
+		688326C827765B8D00055288 /* ShowInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688326C727765B8D00055288 /* ShowInformationTableViewCell.swift */; };
+		688326CA27765B9900055288 /* ShowInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688326C927765B9900055288 /* ShowInformationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		688326BC2776093400055288 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		688326BF2776166100055288 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		688326C12776246A00055288 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		688326C327765B6500055288 /* ShowPosterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowPosterTableViewCell.xib; sourceTree = "<group>"; };
+		688326C527765B7D00055288 /* ShowPosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPosterTableViewCell.swift; sourceTree = "<group>"; };
+		688326C727765B8D00055288 /* ShowInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInformationTableViewCell.swift; sourceTree = "<group>"; };
+		688326C927765B9900055288 /* ShowInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowInformationTableViewCell.xib; sourceTree = "<group>"; };
 		827CF08F3C04356F51F4E21D /* Pods_ShowsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77F8C255D6897A5078C0A69 /* Pods-ShowsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowsApp.debug.xcconfig"; path = "Target Support Files/Pods-ShowsApp/Pods-ShowsApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +192,8 @@
 		688326B22775EEF900055288 /* ShowPosterCell */ = {
 			isa = PBXGroup;
 			children = (
+				688326C327765B6500055288 /* ShowPosterTableViewCell.xib */,
+				688326C527765B7D00055288 /* ShowPosterTableViewCell.swift */,
 			);
 			path = ShowPosterCell;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 		688326B32775EF0B00055288 /* ShowInformationCell */ = {
 			isa = PBXGroup;
 			children = (
+				688326C927765B9900055288 /* ShowInformationTableViewCell.xib */,
+				688326C727765B8D00055288 /* ShowInformationTableViewCell.swift */,
 			);
 			path = ShowInformationCell;
 			sourceTree = "<group>";
@@ -317,9 +329,11 @@
 			files = (
 				688326942775EAE500055288 /* LaunchScreen.storyboard in Resources */,
 				688326B72775FA2A00055288 /* Urbanist-VariableFont_wght.ttf in Resources */,
+				688326C427765B6500055288 /* ShowPosterTableViewCell.xib in Resources */,
 				688326BA2776027400055288 /* watchMovie.json in Resources */,
 				688326912775EAE500055288 /* Assets.xcassets in Resources */,
 				688326AF2775ED7400055288 /* ShowCollectionViewCell.xib in Resources */,
+				688326CA27765B9900055288 /* ShowInformationTableViewCell.xib in Resources */,
 				6883268F2775EAE200055288 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,8 +397,10 @@
 				688326BD2776093400055288 /* UITextField+Extension.swift in Sources */,
 				688326A92775ED2200055288 /* ShowsListViewController.swift in Sources */,
 				688326AD2775ED5200055288 /* ShowCollectionViewCell.swift in Sources */,
+				688326C627765B7D00055288 /* ShowPosterTableViewCell.swift in Sources */,
 				688326A42775EC1F00055288 /* Show.swift in Sources */,
 				688326A22775EBFE00055288 /* ShowsPresenter.swift in Sources */,
+				688326C827765B8D00055288 /* ShowInformationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

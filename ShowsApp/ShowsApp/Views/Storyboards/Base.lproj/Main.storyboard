@@ -220,6 +220,36 @@ on our platform</string>
             </objects>
             <point key="canvasLocation" x="1502.8985507246377" y="79.6875"/>
         </scene>
+        <!--Show Details View Controller-->
+        <scene sceneID="uOD-qe-u8O">
+            <objects>
+                <viewController storyboardIdentifier="ShowDetailsViewController" id="lAx-wP-sjq" customClass="ShowDetailsViewController" customModule="ShowsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dpk-9E-lYl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3rK-5c-7w2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.074509803920000006" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C4h-M1-ny3"/>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.074509803920000006" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3rK-5c-7w2" firstAttribute="top" secondItem="Dpk-9E-lYl" secondAttribute="top" id="Db4-W4-v3L"/>
+                            <constraint firstItem="3rK-5c-7w2" firstAttribute="leading" secondItem="C4h-M1-ny3" secondAttribute="leading" id="FnG-pr-2zI"/>
+                            <constraint firstItem="C4h-M1-ny3" firstAttribute="trailing" secondItem="3rK-5c-7w2" secondAttribute="trailing" id="NAH-ix-Gum"/>
+                            <constraint firstItem="C4h-M1-ny3" firstAttribute="bottom" secondItem="3rK-5c-7w2" secondAttribute="bottom" id="SHF-B1-IAG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showDetailsTableView" destination="3rK-5c-7w2" id="AJW-rf-VaW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmK-PF-OSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248" y="76"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="SoV-Zj-4zS">
             <objects>

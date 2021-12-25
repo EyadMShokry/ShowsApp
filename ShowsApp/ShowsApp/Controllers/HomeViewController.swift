@@ -15,17 +15,20 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setAnimationView()
         searchTextField.setLeftPaddingPoints(amount: 14.0)
         setNavigationbarBackButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animatioView.play()
     }
 
     private func setAnimationView() {
         animatioView.contentMode = .scaleAspectFit
         animatioView.loopMode = .loop
         animatioView.animationSpeed = 1
-        animatioView.play()
     }
     
     private func navigateToShowsList() {
