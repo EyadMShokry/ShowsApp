@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		011E9B0ADD498CB3A93996D2 /* Pods_ShowsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827CF08F3C04356F51F4E21D /* Pods_ShowsApp.framework */; };
+		68727E9A2777413900A7B5A9 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68727E992777413900A7B5A9 /* NetworkConstants.swift */; };
+		68727E9C27774BF700A7B5A9 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68727E9B27774BF700A7B5A9 /* UICollectionView+Extension.swift */; };
 		688326882775EAE200055288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688326872775EAE200055288 /* AppDelegate.swift */; };
 		6883268A2775EAE200055288 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688326892775EAE200055288 /* SceneDelegate.swift */; };
 		6883268C2775EAE200055288 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883268B2775EAE200055288 /* HomeViewController.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		62E25C6430953A980D225EEE /* Pods-ShowsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowsApp.release.xcconfig"; path = "Target Support Files/Pods-ShowsApp/Pods-ShowsApp.release.xcconfig"; sourceTree = "<group>"; };
+		68727E992777413900A7B5A9 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		68727E9B27774BF700A7B5A9 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		688326842775EAE200055288 /* ShowsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688326872775EAE200055288 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		688326892775EAE200055288 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				688326A52775EC4600055288 /* NetworkingManager.swift */,
+				68727E992777413900A7B5A9 /* NetworkConstants.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			children = (
 				688326BC2776093400055288 /* UITextField+Extension.swift */,
 				688326C12776246A00055288 /* UIViewController+Extension.swift */,
+				68727E9B27774BF700A7B5A9 /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,8 +405,10 @@
 				688326AD2775ED5200055288 /* ShowCollectionViewCell.swift in Sources */,
 				688326C627765B7D00055288 /* ShowPosterTableViewCell.swift in Sources */,
 				688326A42775EC1F00055288 /* Show.swift in Sources */,
+				68727E9A2777413900A7B5A9 /* NetworkConstants.swift in Sources */,
 				688326A22775EBFE00055288 /* ShowsPresenter.swift in Sources */,
 				688326C827765B8D00055288 /* ShowInformationTableViewCell.swift in Sources */,
+				68727E9C27774BF700A7B5A9 /* UICollectionView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

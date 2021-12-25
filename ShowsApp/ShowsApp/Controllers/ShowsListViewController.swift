@@ -12,11 +12,17 @@ class ShowsListViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var showsCollectionView: UICollectionView!
+    private let showsPresenter = ShowPresenter()
+    private var showsArray: [Show] = []
     var searchWord = ""
-    let showsArray = ["Ant Man", "Spider Man", "Future Man", "Batman", "La Casa De Papel", "Preson Break", "The Blacklist"]
+
+    override func viewWillAppear(_ animated: Bool) {
+        showsPresenter.searchShows(query: searchWord)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showsPresenter.delegate = self
         setupUI()
     }
     
@@ -42,18 +48,49 @@ class ShowsListViewController: UIViewController {
 
 }
 
+extension ShowsListViewController: ShowsPresenterDelegate {
+    func showLoader() {
+        showSpinner(onView: view)
+    }
+    
+    func hideLoader() {
+        removeSpinner(fromView: view)
+    }
+    
+    func success(response: [Show]?) {
+        self.showsArray = response ?? []
+        self.performUIUpdatesOnMain {
+            self.showsCollectionView.restore()
+            self.showsCollectionView.reloadData()
+            if self.showsArray.isEmpty {
+                self.showsCollectionView.setEmptyMessage("There are no search results")
+            }
+        }
+    }
+    
+    func fail(error: String?) {
+        print("Error: \(error)")
+        self.showsArray = []
+        self.performUIUpdatesOnMain {
+            self.showsCollectionView.reloadData()
+            self.showsCollectionView.setEmptyMessage("An Error Happened. Please, try again later")
+        }
+    }
+}
+
 extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        showsArray.isEmpty ? collectionView.setEmptyMessage("There are no search results") : collectionView.restore()
         return showsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let showCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShowCollectionViewCell", for: indexPath) as! ShowCollectionViewCell
-        showCell.configure(showName: self.showsArray[indexPath.row])
+        showCell.configure(showName: self.showsArray[indexPath.row].show?.name ?? "")
         return showCell
     }
     
