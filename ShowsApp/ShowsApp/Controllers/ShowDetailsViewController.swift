@@ -19,6 +19,7 @@ class ShowDetailsViewController: UIViewController {
         showDetailsTableView.dataSource = self
         showDetailsTableView.delegate = self
         showDetailsTableView.register(UINib(nibName: "ShowPosterTableViewCell", bundle: nil), forCellReuseIdentifier: "ShowPosterTableViewCell")
+        showDetailsTableView.register(UINib(nibName: "ShowInformationTableViewCell", bundle: nil), forCellReuseIdentifier: "ShowInformationTableViewCell")
         showDetailsTableView.separatorColor = .clear
         showDetailsTableView.contentInsetAdjustmentBehavior = .never
         showDetailsTableView.insetsContentViewsToSafeArea = false
@@ -42,7 +43,8 @@ extension ShowDetailsViewController: UITableViewDataSource, UITableViewDelegate 
             return cell
         }
         else if indexPath.section == 1 {
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ShowInformationTableViewCell", for: indexPath) as! ShowInformationTableViewCell
+            return cell
         }
         return UITableViewCell()
     }

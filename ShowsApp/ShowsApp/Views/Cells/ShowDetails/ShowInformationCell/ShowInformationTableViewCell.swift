@@ -8,16 +8,19 @@
 import UIKit
 
 class ShowInformationTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var summaryButton: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBAction func onClickShareButton(_ sender: UIButton) {
+        
     }
-
+    
 }
