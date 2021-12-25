@@ -9,7 +9,7 @@ import UIKit
 
 class ShowDetailsViewController: UIViewController {
     @IBOutlet weak var showDetailsTableView: UITableView!
-    
+    var show: Show!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -40,10 +40,13 @@ extension ShowDetailsViewController: UITableViewDataSource, UITableViewDelegate 
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ShowPosterTableViewCell", for: indexPath) as! ShowPosterTableViewCell
             cell.showDeatilsVC = self
+            cell.configure(show: show)
             return cell
         }
         else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ShowInformationTableViewCell", for: indexPath) as! ShowInformationTableViewCell
+            cell.configure(show: show)
+            cell.showDeatilsVC = self
             return cell
         }
         return UITableViewCell()
@@ -54,7 +57,7 @@ extension ShowDetailsViewController: UITableViewDataSource, UITableViewDelegate 
             return 560
         }
         else {
-            return 400
+            return UITableView.automaticDimension
         }
     }
 }

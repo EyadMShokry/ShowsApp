@@ -21,8 +21,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="605" height="808"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showPoster" translatesAutoresizingMaskIntoConstraints="NO" id="oYb-Zt-Qo3">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oYb-Zt-Qo3">
                         <rect key="frame" x="0.0" y="0.0" width="605" height="808"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzj-9x-mUP" customClass="GradiantView" customModule="ShowsApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="605" height="808"/>
@@ -110,6 +111,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="categoriesLabel" destination="OVD-2W-yd5" id="2S5-QX-DsO"/>
                 <outlet property="closeButton" destination="UXS-VK-TqH" id="o1E-Ci-qPQ"/>
                 <outlet property="showGradientView" destination="Uzj-9x-mUP" id="vJw-Y8-Wx6"/>
                 <outlet property="showInformationLabel" destination="QYN-Y6-mkx" id="80m-ge-wZD"/>
@@ -120,7 +122,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="showPoster" width="675" height="1000"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

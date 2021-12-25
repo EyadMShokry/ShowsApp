@@ -139,13 +139,14 @@
                     <constraint firstItem="azZ-KM-bJ5" firstAttribute="leading" secondItem="1fD-nl-hpR" secondAttribute="leading" constant="24" id="JKp-xs-GsF"/>
                     <constraint firstAttribute="trailing" secondItem="azZ-KM-bJ5" secondAttribute="trailing" constant="24" id="OL2-Mw-1XM"/>
                     <constraint firstItem="azZ-KM-bJ5" firstAttribute="top" secondItem="1fD-nl-hpR" secondAttribute="top" constant="24" id="fmb-Eh-N89"/>
+                    <constraint firstAttribute="bottom" secondItem="azZ-KM-bJ5" secondAttribute="bottom" constant="16" id="rrm-eu-WaJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="languageLabel" destination="gXF-44-bER" id="4XO-Nr-jWe"/>
                 <outlet property="rateLabel" destination="NUC-bo-b4L" id="bHg-8f-DnX"/>
                 <outlet property="shareButton" destination="srS-Vn-7Un" id="NNp-f5-DlO"/>
-                <outlet property="summaryButton" destination="r0x-OM-my4" id="Gj0-1r-uzt"/>
+                <outlet property="summaryLabel" destination="r0x-OM-my4" id="iJa-pc-KOO"/>
             </connections>
             <point key="canvasLocation" x="432.60869565217394" y="47.544642857142854"/>
         </tableViewCell>

@@ -31,21 +31,19 @@ class ShowsListViewController: UIViewController {
         showsCollectionView.delegate = self
         showsCollectionView.register(UINib(nibName: "ShowCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ShowCollectionViewCell")
         searchTextField.setLeftPaddingPoints(amount: 24)
+        searchTextField.text = searchWord
         setNavigationbarBackButton()
     }
     
-    private func navigateToShowDetails() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let showsListVC = storyboard.instantiateViewController(withIdentifier: "ShowsListViewController") as! ShowsListViewController
-        showsListVC.searchWord = searchTextField.text ?? ""
-        self.navigationController?.pushViewController(showsListVC, animated: true)
-    }
-    
     @IBAction func onClickSearchButton(_ sender: UIButton) {
-        
+        if searchTextField.text == nil || searchTextField.text == "" {
+            self.alertMessage(title: "Empty Field!", userMessage: "Please, fill the search field to continue")
+        }
+        else {
+            view.endEditing(true)
+            showsPresenter.searchShows(query: self.searchTextField.text ?? "")
+        }
     }
-    
-
 }
 
 extension ShowsListViewController: ShowsPresenterDelegate {
@@ -90,7 +88,7 @@ extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let showCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShowCollectionViewCell", for: indexPath) as! ShowCollectionViewCell
-        showCell.configure(showName: self.showsArray[indexPath.row].show?.name ?? "")
+        showCell.configure(show: self.showsArray[indexPath.item])
         return showCell
     }
     
@@ -99,6 +97,7 @@ extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewD
         let showDetailsVC = storyboard.instantiateViewController(withIdentifier: "ShowDetailsViewController") as! ShowDetailsViewController
         showDetailsVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         showDetailsVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        showDetailsVC.show = showsArray[indexPath.item]
         self.present(showDetailsVC, animated: true, completion: nil)
     }
     

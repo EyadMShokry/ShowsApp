@@ -22,66 +22,74 @@
                 <rect key="frame" x="0.0" y="0.0" width="163" height="243"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showPoster" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-za-UhA">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-za-UhA">
                         <rect key="frame" x="0.0" y="0.0" width="163" height="243"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woV-yL-Hwh" customClass="GradiantView" customModule="ShowsApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="163" height="243"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="st9-dT-enZ">
-                                <rect key="frame" x="34" y="161.5" width="95.5" height="65.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="st9-dT-enZ">
+                                <rect key="frame" x="0.0" y="161.5" width="163" height="65.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-tw-UF0">
-                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Man" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-tw-UF0">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="22"/>
                                         <fontDescription key="fontDescription" name="UrbanistRoman-ExtraBold" family="Urbanist" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 . 30 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be4-3t-ftT">
-                                        <rect key="frame" x="0.0" y="26" width="95.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
-                                        <color key="textColor" red="0.78823529411764703" green="0.7803921568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-cM-TAr" customClass="CosmosView" customModule="Cosmos">
-                                        <rect key="frame" x="0.0" y="49.5" width="79.5" height="16"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
-                                                <color key="value" red="0.78823529411764703" green="0.7803921568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
-                                                <color key="value" red="0.78823529410000004" green="0.78039215689999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                                <real key="value" value="16"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
-                                                <real key="value" value="-2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ulz-v4-jc6">
+                                        <rect key="frame" x="34" y="26" width="95.5" height="39.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 . 30 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be4-3t-ftT">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
+                                                <color key="textColor" red="0.78823529411764703" green="0.7803921568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-cM-TAr" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="23.5" width="72" height="16"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                        <color key="value" red="0.78823529411764703" green="0.7803921568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                        <color key="value" red="0.78823529410000004" green="0.78039215689999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                        <real key="value" value="-2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="tHv-cM-TAr" secondAttribute="trailing" constant="16" id="SdU-LI-uc6"/>
+                                    <constraint firstAttribute="trailing" secondItem="lxn-tw-UF0" secondAttribute="trailing" id="8H4-sk-J3I"/>
+                                    <constraint firstItem="lxn-tw-UF0" firstAttribute="leading" secondItem="st9-dT-enZ" secondAttribute="leading" id="AE1-pr-R55"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="st9-dT-enZ" firstAttribute="leading" secondItem="woV-yL-Hwh" secondAttribute="leading" id="PjH-tx-2BF"/>
                             <constraint firstItem="st9-dT-enZ" firstAttribute="centerX" secondItem="woV-yL-Hwh" secondAttribute="centerX" id="b43-jT-haa"/>
                             <constraint firstAttribute="bottom" secondItem="st9-dT-enZ" secondAttribute="bottom" constant="16" id="eI9-WN-z3w"/>
+                            <constraint firstAttribute="trailing" secondItem="st9-dT-enZ" secondAttribute="trailing" id="gKD-v1-SBb"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -100,6 +108,7 @@
             <size key="customSize" width="244" height="260"/>
             <connections>
                 <outlet property="showGradinetView" destination="woV-yL-Hwh" id="l4T-eB-xD7"/>
+                <outlet property="showImageView" destination="GSW-za-UhA" id="Qwp-sG-ti3"/>
                 <outlet property="showInformationLabel" destination="be4-3t-ftT" id="Ekg-oK-Kvt"/>
                 <outlet property="showNameLabel" destination="lxn-tw-UF0" id="BWk-Uv-Tl5"/>
                 <outlet property="showRatingView" destination="tHv-cM-TAr" id="PTM-c6-PXq"/>
@@ -112,7 +121,4 @@
             <size key="intrinsicContentSize" width="72" height="16"/>
         </designable>
     </designables>
-    <resources>
-        <image name="showPoster" width="675" height="1000"/>
-    </resources>
 </document>
