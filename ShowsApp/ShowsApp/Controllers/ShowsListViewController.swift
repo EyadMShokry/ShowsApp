@@ -91,7 +91,7 @@ extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewD
         return showCell
     }
     
-    fileprivate func extractedFunc(_ indexPath: IndexPath) {
+    fileprivate func navigateToShowDetails(_ indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let showDetailsVC = storyboard.instantiateViewController(withIdentifier: "ShowDetailsViewController") as! ShowDetailsViewController
         showDetailsVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
@@ -101,7 +101,7 @@ extension ShowsListViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        extractedFunc(indexPath)
+        navigateToShowDetails(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
